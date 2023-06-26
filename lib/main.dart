@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:logger/logger.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
@@ -23,7 +24,9 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({super.key, required this.title});
+
+
 
   final String title;
 
@@ -32,41 +35,102 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Logger logger = Logger();
+
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello'),
-      ),
-      body: Center(
-        child: InkWell(
-          onTap: (){
-            logger.i('Tapped on Container');
+        appBar: AppBar(
 
-          },
-          onLongPress: (){
-            logger.i('Long Tapped on Container');
-          },
-          onDoubleTap: (){
-            logger.i('Double Tapped on Container');
-          },
-          child: Container(
-           width: 200,
-            height: 200,
-            color:Colors.amber,
-            child: Center(
-                child: InkWell(
-                  onTap: (){
-                    logger.i('Text Widget Tapped!');
-                  },
-                child: Text(
-                  "Click Here", style: TextStyle(fontSize: 21, fontWeight:FontWeight.w700 ),))),
-
-          ),
+          title: const Text('Hello'),
         ),
-      ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 11),
+                          height: 200,
+                          width: 200,
+                          color: Colors.lightGreen,
+                        ),
+                      ), Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.orange,
+                      ), Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.blue,
+                      ), Container(
+                        margin: const EdgeInsets.only(right: 11),
+                        height: 200,
+                        width: 200,
+                        color: Colors.grey,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 11),
+                height: 200,
+               // width: 200,
+                color: Colors.orange,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 11),
+                height: 200,
+               // width: 200,
+                color: Colors.blue,
+              ),
+              Container(
+                margin:const EdgeInsets.only(bottom: 11),
+                height: 200,
+               // width: 200,
+                color: Colors.grey,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 11),
+                height: 200,
+             //   width: 200,
+                color: Colors.blue,
+              ),
+    Container(
+    margin: const EdgeInsets.only(bottom: 11),
+    height: 200,
+    //width: 200,
+    color: Colors.black,
+    ),
+    Container(
+    margin: const EdgeInsets.only(bottom: 11),
+    height: 200,
+   // width: 200,
+    color: Colors.deepPurpleAccent,
+    ),
+    Container(
+    margin: const EdgeInsets.only(bottom: 11),
+    height: 200,
+  //  width: 200,
+    color: Colors.amberAccent,
+    ),
+            ],
+          ),
+        )
+
+
+
+
     );
   }
 }
