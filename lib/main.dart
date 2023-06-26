@@ -55,19 +55,19 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text('R1', style: TextStyle(fontSize: 25),),
-                  Text('R2', style: TextStyle(fontSize: 25),),
-                  Text('R3', style: TextStyle(fontSize: 25),),
-                  Text('R4', style: TextStyle(fontSize: 25),),
-                  Text('R5', style: TextStyle(fontSize: 25),),
+                  Text('R1', style: TextStyle(fontSize: 35),),
+                  Text('R2', style: TextStyle(fontSize: 35),),
+                  Text('R3', style: TextStyle(fontSize: 35),),
+                  Text('R4', style: TextStyle(fontSize: 35),),
+                  Text('R5', style: TextStyle(fontSize: 35),),
 
                 ],
               ),
-              Text('A', style: TextStyle(fontSize: 25),),
-              Text('B', style: TextStyle(fontSize: 25),),
-              Text('C', style: TextStyle(fontSize: 25),),
-              Text('D', style: TextStyle(fontSize: 25),),
-              Text('E', style: TextStyle(fontSize: 25),),
+              Text('A', style: TextStyle(fontSize: 35),),
+              Text('B', style: TextStyle(fontSize: 35),),
+              Text('C', style: TextStyle(fontSize: 35),),
+              Text('D', style: TextStyle(fontSize: 35),),
+              Text('E', style: TextStyle(fontSize: 35),),
               ElevatedButton(onPressed: (){
 
               }, child: Text('Click'))
