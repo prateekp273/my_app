@@ -24,44 +24,11 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Hello"),
       ),
-      body: Column(
-      //  mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-             // width:50,
-              height: 100,
-              color: Colors.blue,
-            ),
-          ),
-          Expanded(
-            flex: 4,
-            child: Container(
-            //  width:50,
-              height: 100,
-              color: Colors.orange,
-            ),
-          ),
-          Expanded(
-            flex: 3,
-            child: Container(
-           //   width:50,
-              height: 100,
-              color: Colors.grey,
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-           //   width:50,
-              height: 100,
-              color: Colors.green,
-            ),
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(11),
+        child: Text('Hello World!', style: TextStyle(fontSize: 25),),
       )
     );
   }
