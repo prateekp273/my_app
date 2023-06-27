@@ -1,75 +1,34 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FlutterApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-
+class FlutterApp extends StatelessWidget {
+  const FlutterApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: "FlutterApp",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: const DashBoardScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
+class DashBoardScreen extends StatelessWidget {
+  const DashBoardScreen({Key? key}) : super(key: key); // Named 'key' parameter is already present
 
   @override
   Widget build(BuildContext context) {
-    var arrNames = ['Raman', 'Ramanujan', 'Jones', 'James', 'Ram', 'Shyam', 'Bobby', 'Iris'];
-
     return Scaffold(
-        appBar: AppBar(
-
-          title: const Text('Hello'),
-        ),
-        body: ListView.separated(itemBuilder: (context, index) {
-          return Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              )
-            ],
-          );
-        },
-        itemCount: arrNames.length,
-         separatorBuilder: (context, index){
-          return Divider(height: 4,thickness: 2,);
-         },
-
-        )
+      appBar: AppBar(
+        title: const Text("Dashboard"),
+      ),
+      body: Container(
+        color: Colors.blue.shade50,
+      ),
     );
   }
 }
