@@ -26,30 +26,40 @@ class DashBoardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dashboard"),
       ),
-      body: Row(
+      body: Column(
       //  mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            width:50,
-            height: 100,
-            color: Colors.blue,
+          Expanded(
+            flex: 2,
+            child: Container(
+             // width:50,
+              height: 100,
+              color: Colors.blue,
+            ),
           ),
           Expanded(
+            flex: 4,
             child: Container(
-              width:50,
+            //  width:50,
               height: 100,
               color: Colors.orange,
             ),
           ),
-          Container(
-            width:50,
-            height: 100,
-            color: Colors.grey,
+          Expanded(
+            flex: 3,
+            child: Container(
+           //   width:50,
+              height: 100,
+              color: Colors.grey,
+            ),
           ),
-          Container(
-            width:50,
-            height: 100,
-            color: Colors.green,
+          Expanded(
+            flex: 1,
+            child: Container(
+           //   width:50,
+              height: 100,
+              color: Colors.green,
+            ),
           ),
         ],
       )
