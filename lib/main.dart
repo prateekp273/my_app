@@ -39,44 +39,37 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var arrNames = ['Raman', 'Ramanujan', 'Jones', 'James', 'Ram', 'Shyam', 'Bobby', 'Iris'];
 
     return Scaffold(
         appBar: AppBar(
 
           title: const Text('Hello'),
         ),
-        body: Center(
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            reverse:true,
+        body: ListView.separated(itemBuilder: (context, index) {
+          return Row(
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text('One', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text('Two', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text('Three', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Four', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text('Five', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+                child: Text(arrNames[index], style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
               )
             ],
-          ),
+          );
+        },
+        itemCount: arrNames.length,
+         separatorBuilder: (context, index){
+          return Divider(height: 4,thickness: 2,);
+         },
+
         )
-
-
-
-
     );
   }
 }
