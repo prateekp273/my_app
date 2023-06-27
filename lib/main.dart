@@ -27,7 +27,32 @@ class DashBoardScreen extends StatelessWidget {
         title: const Text("Dashboard"),
       ),
       body: Container(
-        color: Colors.blue.shade50,
+        width: double.infinity,
+          height: double.infinity,
+
+        child: Center(
+          child: Container(
+            width:150,
+            height: 150,
+           
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+            //  borderRadius: BorderRadius.circular(21),
+              border: Border.all(
+                width:5,
+                color: Colors.black
+              ),
+                boxShadow: const [
+                   BoxShadow(
+                    blurRadius: 51,
+                    color: Colors.grey,
+                    spreadRadius: 11
+                  )
+                ],
+              shape: BoxShape.circle
+            ),
+          ),
+        )
       ),
     );
   }
