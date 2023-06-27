@@ -45,87 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
 
           title: const Text('Hello'),
         ),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Container(
-                          margin: const EdgeInsets.only(right: 11),
-                          height: 200,
-                          width: 200,
-                          color: Colors.lightGreen,
-                        ),
-                      ), Container(
-                        margin: const EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.orange,
-                      ), Container(
-                        margin: const EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.blue,
-                      ), Container(
-                        margin: const EdgeInsets.only(right: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.grey,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 11),
-                height: 200,
-               // width: 200,
-                color: Colors.orange,
-              ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 11),
-                height: 200,
-               // width: 200,
-                color: Colors.blue,
-              ),
-              Container(
-                margin:const EdgeInsets.only(bottom: 11),
-                height: 200,
-               // width: 200,
-                color: Colors.grey,
-              ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 11),
-                height: 200,
-             //   width: 200,
-                color: Colors.blue,
-              ),
-    Container(
-    margin: const EdgeInsets.only(bottom: 11),
-    height: 200,
-    //width: 200,
-    color: Colors.black,
-    ),
-    Container(
-    margin: const EdgeInsets.only(bottom: 11),
-    height: 200,
-   // width: 200,
-    color: Colors.deepPurpleAccent,
-    ),
-    Container(
-    margin: const EdgeInsets.only(bottom: 11),
-    height: 200,
-  //  width: 200,
-    color: Colors.amberAccent,
-    ),
-            ],
-          ),
+        body: ListView(
+          children: [
+            Text('One', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text('Two', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text('Three', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text('Four', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),),
+            Text('Five', style: TextStyle(fontSize: 21, fontWeight: FontWeight.w500),)
+          ],
         )
 
 
