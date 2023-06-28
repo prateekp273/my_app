@@ -24,17 +24,11 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Dashboard"),
+        title: const Text("Hello World"),
       ),
       body: Center(
-        child:  Container(
-
-          child: const CircleAvatar(
-            child: Text('Prateek', style: TextStyle(color: Colors.black, fontSize: 21),),
-           //  backgroundImage:  AssetImage('assests/images/flutter.jpg'),
-            backgroundColor: Colors.green,
-            maxRadius: 50,
-          ),
+        child: Text(
+          'Hello World', style: TextStyle(fontFamily: 'FontMain', fontWeight: FontWeight.w500, fontSize: 55),
         ),
       )
     );
