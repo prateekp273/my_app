@@ -24,16 +24,19 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Hello"),
+        title: const Text("Dashboard"),
       ),
-      body: Container(
-
-          color: Colors.blueGrey,
-        margin: EdgeInsets.all(11),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text('Hello World!', style: TextStyle(fontSize: 25, color: Colors.white),),
-        ))
+      body: Center(
+        child:  Container(
+          width: 100,
+          height: 100,
+          child: const CircleAvatar(
+            backgroundImage:  AssetImage('assests/images/flutter.jpg'),
+            backgroundColor: Colors.green,
+            radius: 800,
+          ),
+        ),
+      )
     );
   }
 }
