@@ -28,12 +28,11 @@ class DashBoardScreen extends StatelessWidget {
       ),
       body: Center(
         child:  Container(
-          width: 100,
-          height: 100,
+
           child: const CircleAvatar(
             backgroundImage:  AssetImage('assests/images/flutter.jpg'),
             backgroundColor: Colors.green,
-            radius: 800,
+            radius: 200,
           ),
         ),
       )
