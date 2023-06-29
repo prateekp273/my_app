@@ -28,12 +28,39 @@ class DashBoardScreen extends StatelessWidget {
         ),
         body: Center(child: Container(
           width: 300,
-            child: TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextField(
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
 
-                )
-              ),
+            )
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(11),
+                      borderSide: BorderSide(
+                        color: Colors.deepOrange
+                      )
+
+                    )
+                  ),
+                ),
+                Container(height: 11,),
+                TextField(
+                  decoration: InputDecoration(
+
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(11),
+                          borderSide: BorderSide(
+                              color: Colors.deepOrange
+                          )
+
+                      )
+                  ),
+                ),
+
+              ],
             )))
     );
   }
