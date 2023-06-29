@@ -26,16 +26,15 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Hellooooooooooooooooooooo"),
         ),
-        body: Center(
-          child: Card(
-            shadowColor: Colors.orange,
-            elevation: 12,
+        body: Center(child: Container(
+          width: 300,
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(
 
-              child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text('Hello World!', style: TextStyle(fontSize: 55),),
-          )),
-        )
+                )
+              ),
+            )))
     );
   }
 }
