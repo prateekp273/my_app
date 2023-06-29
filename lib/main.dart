@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(const FlutterApp());
@@ -47,7 +48,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Current Time: ${time.hour}:${time.minute}:${time.second}', style: TextStyle(fontSize: 25)),
+              Text('Current Time: ${DateFormat('yMMMMd').format(time)}', style: TextStyle(fontSize: 25)),
               ElevatedButton(
                 onPressed: () {
                   setState(() {
