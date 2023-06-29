@@ -6,6 +6,7 @@ void main() {
 
 class FlutterApp extends StatelessWidget {
   const FlutterApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,33 +18,48 @@ class FlutterApp extends StatelessWidget {
   }
 }
 
-class DashBoardScreen extends StatelessWidget {
-  const DashBoardScreen({Key? key}) : super(key: key); // Named 'key' parameter is already present
+class DashBoardScreen extends StatefulWidget {
+  const DashBoardScreen({Key? key}) : super(key: key);
+
+  @override
+  _DashBoardScreenState createState() => _DashBoardScreenState();
+}
+
+class _DashBoardScreenState extends State<DashBoardScreen> {
+  late DateTime time;
+
+  @override
+  void initState() {
+    super.initState();
+    time = DateTime.now();
+  }
 
   @override
   Widget build(BuildContext context) {
-    var time = DateTime.now();
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Hello"),
-        ),
-        body: Center(
-          child: Container(
-            width: 200,
-            height: 200,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Current Time: $time', style: TextStyle(fontSize: 25),),
-                ElevatedButton(onPressed: (){
-                  setState()
-
-                }, child: Text('Current Time')),
-
-              ],
-            ),
+      appBar: AppBar(
+        title: const Text("Hello"),
+      ),
+      body: Center(
+        child: Container(
+          width: 200,
+          height: 200,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Current Time: ${time.hour}:${time.minute}:${time.second}', style: TextStyle(fontSize: 25)),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    time = DateTime.now();
+                  });
+                },
+                child: Text('Refresh Time'),
+              ),
+            ],
           ),
-        )
+        ),
+      ),
     );
   }
 }
