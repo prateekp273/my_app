@@ -38,9 +38,11 @@ class DashBoardScreen extends StatelessWidget {
         children: [
           Text('Text 1', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.orange),),
           Text('Text 2', style: Theme.of(context).textTheme.titleMedium),
-          Text('Text 3', style: mTextStyle11(),
-          ),
-
+          Text('Text 3', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.orange),),
+          Text('Text 4', style: mTextStyle11()),
+          Text('Text 5', style: mTextStyle16()),
+          Text('Text 6', style: mTextStyle21()),
+          Text('Text 7', style: mTextStyle41()),
         ],
       ),
     );
