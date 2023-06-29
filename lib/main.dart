@@ -22,52 +22,12 @@ class DashBoardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var time = DateTime.now();
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Hellooooooooooooooooooooo"),
+          title: const Text("Hello"),
         ),
-        body: Center(child: Container(
-          width: 300,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextField(
-                  decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(11),
-            borderSide: BorderSide(
-                color: Colors.deepOrange,
-              width: 2
-            )
-
-            ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(11),
-                        borderSide: BorderSide(
-                            color: Colors.blueAccent,
-                            width: 2
-                        )
-                    )
-
-
-                  ),
-                ),
-                Container(height: 11,),
-                TextField(
-                  decoration: InputDecoration(
-
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(11),
-                          borderSide: BorderSide(
-                              color: Colors.deepOrange
-                          )
-
-                      )
-                  ),
-                ),
-
-              ],
-            )))
+        body: Text('Current Time: $time', style: TextStyle(fontSize: 25),)
     );
   }
 }
