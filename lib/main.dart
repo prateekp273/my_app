@@ -34,16 +34,22 @@ class DashBoardScreen extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
-
+                borderRadius: BorderRadius.circular(11),
+            borderSide: BorderSide(
+                color: Colors.deepOrange,
+              width: 2
             )
 
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(11),
-                      borderSide: BorderSide(
-                        color: Colors.deepOrange
-                      )
-
+            ),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(11),
+                        borderSide: BorderSide(
+                            color: Colors.blueAccent,
+                            width: 2
+                        )
                     )
+
+
                   ),
                 ),
                 Container(height: 11,),
