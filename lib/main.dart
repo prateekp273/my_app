@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_basics/ui_helper/util.dart';
 
 void main() {
   runApp(const FlutterApp());
@@ -37,8 +38,9 @@ class DashBoardScreen extends StatelessWidget {
         children: [
           Text('Text 1', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.orange),),
           Text('Text 2', style: Theme.of(context).textTheme.titleMedium),
-          Text('Text 3', style: Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.orange),
+          Text('Text 3', style: mTextStyle11(),
           ),
+
         ],
       ),
     );
