@@ -27,7 +27,23 @@ class DashBoardScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Hello"),
         ),
-        body: Text('Current Time: $time', style: TextStyle(fontSize: 25),)
+        body: Center(
+          child: Container(
+            width: 200,
+            height: 200,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Current Time: $time', style: TextStyle(fontSize: 25),),
+                ElevatedButton(onPressed: (){
+                  setState()
+
+                }, child: Text('Current Time')),
+
+              ],
+            ),
+          ),
+        )
     );
   }
 }
